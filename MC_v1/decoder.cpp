@@ -28,7 +28,7 @@ string z;
          int temp = 0;
          for (int u = 0; u < z.length(); u++) {
               
-              if (isspace(z[u]) || u == bill.length() - 1) {
+              if (isspace(z[u]) || u == z.length() - 1) {
 
                 s = z.substr(temp,(u - temp));
                 temp = u + 1;
