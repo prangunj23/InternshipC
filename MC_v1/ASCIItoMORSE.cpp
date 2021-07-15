@@ -64,20 +64,33 @@ int main() {
     } else if (type == 2) {
          string z;
          std::getline(cin, z);
+         z += " ";
          string s;
+         string out;
          int temp = 0;
          for (int u = 0; u < z.length(); u++) {
               
-              if (isspace(z[u])) {
+              if (isspace(z[u]) || u == bill.length() - 1) {
+
                 s = z.substr(temp,(u - temp));
-                temp = u;
-                cout << s << endl;
+                temp = u + 1;
+                for (int i = 0; i < sizeOfArray; i++) {
+                if (s == morseCodeMap[i]) {
+                     out = morseCodeCharacters[i];
+                     cout << out;
+                }   
+
+                
               }
-              
-              
-                   
-              }
+
+                  
+         }
+           }
+           
+          
               
          }
          return 0;
 }
+
+
