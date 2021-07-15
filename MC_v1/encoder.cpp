@@ -21,24 +21,8 @@ char morseCodeCharacters[sizeOfArray] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
  
            
           
-      
-
 int main() {
-     
-
-     cout << "1 for ASCII to MORSE" << endl << "2 for MORSE to ASCII" << endl;
-      int type; 
-      cin >> type;
-      string bill;
-      getline(cin, bill);
-      
-      
-      int counter = 0;
-      int flag = 0; 
-     
-
-    if (type == 1) { 
-     string x; 
+    string x; 
      getline(cin, x);
      for (int i = 0; i < x.length(); i++) {
           x[i] = toupper(x[i]);
@@ -60,37 +44,4 @@ int main() {
                           break;
                 }
           } 
-     
-    } else if (type == 2) {
-         string z;
-         std::getline(cin, z);
-         z += " ";
-         string s;
-         string out;
-         int temp = 0;
-         for (int u = 0; u < z.length(); u++) {
-              
-              if (isspace(z[u]) || u == bill.length() - 1) {
-
-                s = z.substr(temp,(u - temp));
-                temp = u + 1;
-                for (int i = 0; i < sizeOfArray; i++) {
-                if (s == morseCodeMap[i]) {
-                     out = morseCodeCharacters[i];
-                     cout << out;
-                }   
-
-                
-              }
-
-                  
-         }
-           }
-           
-          
-              
-         }
-         return 0;
 }
-
-
