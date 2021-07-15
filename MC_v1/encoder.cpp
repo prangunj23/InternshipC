@@ -24,6 +24,7 @@ char morseCodeCharacters[sizeOfArray] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
 int main() {
     string x; 
      getline(cin, x);
+    int flag = 0;
      for (int i = 0; i < x.length(); i++) {
           x[i] = toupper(x[i]);
           temp = x[i];
