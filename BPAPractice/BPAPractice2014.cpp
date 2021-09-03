@@ -14,10 +14,25 @@ using namespace std;
         void add_item() {
             cout << "Enter the name of this new item: " << endl;
             string x; cin >> x;
-
-            string d;
+            int location;
+             Item;
+            String Cost;
+            String Quantity;
+            int numbers
+            vector <string> item;
+            vector <int> quantities;
             ifstream myFile("gameinventory.txt");
-            
+            while (myFile >> Item >> Cost >> Quantity) {
+               item.push_back(Item);
+               
+               quantities.push_back(numbers);
+             }
+            for (int i = 0; i < item.size(); i++) {
+                if (item[i] == x) {
+                   i = location;     
+            }
+           }
+             
         }
 
 
